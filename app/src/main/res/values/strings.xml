@@ -1,4 +1,20 @@
 <resources>
     <string name="app_name">Code Challenge</string>
-    <string name="movie_and_genres">%s - %s</string>
+
+    <!-- Movie List Activity -->
+    <string name="movie_list_title">Filmes</string>
+    <string name="movie_list_search_title">Search</string>
+    <string name="movie_list_search_hint">Search by title</string>
+    <string name="movie_list_empty_state">No movies!</string>
+
+    <!-- Movie List Item -->
+    <string name="movie_list_item_details">Details</string>
+    <string name="movie_list_item_popularity">%1s Popularity</string>
+
+    <!-- Movie Details Activity -->
+    <string name="movie_details_popularity">Popularity: %1s</string>
+    <string name="movie_details_release_date">Release date: %1s</string>
+    <string name="movie_details_vote_average">Vote average: %1s</string>
+    <string name="movie_details_runtime">Runtime: %1s</string>
+
 </resources>
