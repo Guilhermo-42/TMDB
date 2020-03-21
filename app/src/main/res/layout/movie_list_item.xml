@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@color/white"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/movieItemTitleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Birdman or (The unexpected virtue of ignorance)" />
+
+        <TextView
+            android:id="@+id/movieItemPopularityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:textColor="@color/grey"
+            app:layout_constraintStart_toStartOf="@+id/movieItemTitleText"
+            app:layout_constraintTop_toBottomOf="@+id/movieItemTitleText"
+            tools:text="28.12 Popularity" />
+
+        <ImageView
+            android:id="@+id/movieItemPosterImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="13dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/movieItemDescriptionText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movieItemPopularityText" />
+
+        <TextView
+            android:id="@+id/movieItemDescriptionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="@+id/movieItemTitleText"
+            app:layout_constraintStart_toStartOf="@+id/movieItemTitleText"
+            app:layout_constraintTop_toBottomOf="@+id/movieItemPosterImage"
+            app:layout_goneMarginTop="13dp"
+            tools:text="Some big description here to test this textView when the API returns a big description like this one I'm writing down right now, I hope it works as expected" />
+
+        <TextView
+            android:id="@+id/movieItemDetailsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:layout_marginBottom="18dp"
+            android:fontFamily="sans-serif-medium"
+            android:lineSpacingExtra="2sp"
+            android:text="@string/movie_list_item_details"
+            android:textAllCaps="true"
+            android:textColor="@color/purple"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/movieItemTitleText"
+            app:layout_constraintTop_toBottomOf="@+id/movieItemDescriptionText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

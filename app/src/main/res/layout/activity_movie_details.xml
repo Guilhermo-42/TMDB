@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:background="@color/white"
+        tools:context=".flow.movies.details.MovieDetailsActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/movieDetailsToolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/movie_list_title"
+            app:titleTextColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/movieDetailsPosterImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movieDetailsToolbar"
+            tools:layout_height="400dp" />
+
+        <TextView
+            android:id="@+id/movieDetailsTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/movieDetailsTagline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Some big title here | SOME BG TITLE HERE lorem ipsiu"
+            tools:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/movieDetailsTagline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/movieDetailsPosterImage"
+            app:layout_constraintEnd_toEndOf="@+id/movieDetailsTitle"
+            app:layout_constraintStart_toStartOf="@+id/movieDetailsTitle"
+            tools:text="Some big description here | SOME BG description HERE lorem ipsiu BG description HERE lorem ipsiu Some big description here | SOME BG description HERE lorem ipsiu"
+            tools:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/movieDetailsPopularity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:textColor="@color/lightishGrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/movieDetailsTitle"
+            app:layout_constraintStart_toStartOf="@+id/movieDetailsTitle"
+            app:layout_constraintTop_toBottomOf="@+id/movieDetailsPosterImage"
+            tools:text="Popularity: 26.81" />
+
+        <ImageView
+            android:id="@+id/movieDetailsProductionCompanyLogo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/movieDetailsPopularity" />
+
+        <TextView
+            android:id="@+id/movieDetailsReleaseDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/lightishGrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/movieDetailsTitle"
+            app:layout_constraintStart_toStartOf="@+id/movieDetailsTitle"
+            app:layout_constraintTop_toBottomOf="@+id/movieDetailsPopularity"
+            tools:text="Release date: 2016-10-19" />
+
+        <TextView
+            android:id="@+id/movieDetailsVoteAverage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/lightishGrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/movieDetailsTitle"
+            app:layout_constraintStart_toStartOf="@+id/movieDetailsTitle"
+            app:layout_constraintTop_toBottomOf="@+id/movieDetailsReleaseDate"
+            tools:text="Vote average: 4.19" />
+
+        <TextView
+            android:id="@+id/movieDetailsRuntime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/lightishGrey"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/movieDetailsTitle"
+            app:layout_constraintStart_toStartOf="@+id/movieDetailsTitle"
+            app:layout_constraintTop_toBottomOf="@+id/movieDetailsVoteAverage"
+            tools:text="Runtime: 1:30hr" />
+
+        <TextView
+            android:id="@+id/movieDetailsDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/movieDetailsTitle"
+            app:layout_constraintStart_toStartOf="@+id/movieDetailsTitle"
+            app:layout_constraintTop_toBottomOf="@+id/movieDetailsRuntime"
+            tools:text="Jack Reacher must uncover the truth behind a major government conspiracy in order to clear his name. On the run as a fugitive from the law, Reacher uncovers a potential secret from his past that could change his life forever." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

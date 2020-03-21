@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MovieX</string>
+    <string name="app_name">Code Challenge</string>
 
     <!-- Movie List Activity -->
     <string name="movie_list_title">Filmes</string>
